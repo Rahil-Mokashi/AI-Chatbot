@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Welcome Back</h2>
+            <p>Login to continue to AI Chat</p>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+
+            <div class="login-options">
+                <label>
+                    <input type="checkbox" id="rememberMe"> Remember Me
+                </label>
+                <a href="#" id="forgotPassword">Forgot Password?</a>
+            </div>
+
+            <button id="loginBtn" class="login-btn">Login</button>
+
+            <div class="divider">OR</div>
+
+            <button id="googleBtn" class="google-btn">Login with Google</button>
+        </div>
+    </div>
+
+    <script>
+        const loginBtn = document.getElementById("loginBtn");
+        const googleBtn = document.getElementById("googleBtn");
+        const rememberMe = document.getElementById("rememberMe");
+        const forgotPassword = document.getElementById("forgotPassword");
+
+        // Load saved email if Remember Me was used
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedEmail = localStorage.getItem("savedEmail");
+            if (savedEmail) {
+                document.getElementById("email").value = savedEmail;
+                rememberMe.checked = true;
+            }
+        });
+
+        // Login Button
+        loginBtn.addEventListener("click", () => {
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (email && password) {
+                if (rememberMe.checked) {
+                    localStorage.setItem("savedEmail", email);
+                } else {
+                    localStorage.removeItem("savedEmail");
+                }
+                window.location.href = "chat.html"; // Redirect after login
+            } else {
+                alert("Please enter both email and password!");
+            }
+        });
+
+        // Google Login Simulation
+        googleBtn.addEventListener("click", () => {
+            alert("Google login simulated!");
+            window.location.href = "chat.html";
+        });
+
+        // Forgot Password (dummy action)
+        forgotPassword.addEventListener("click", (e) => {
+            e.preventDefault();
+            const email = document.getElementById("email").value.trim();
+            if (email) {
+                alert(`A password reset link has been sent to ${email}`);
+            } else {
+                alert("Please enter your email first!");
+            }
+        });
+    </script>
+</body>
+</html>
