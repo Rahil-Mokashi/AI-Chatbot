@@ -1,0 +1,115 @@
+/* Login Page Styling */
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1f1f2e;
+}
+
+.login-box {
+    background: #2a2a3d;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #b0b0b0;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.login-box label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: #1f1f2e;
+    color: white;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #b78cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.divider {
+    margin: 10px 0;
+    color: #888;
+    font-size: 14px;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Login Options (Remember Me + Forgot Password) */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+.login-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.login-options input[type="checkbox"] {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.login-options a {
+    color: #b78cff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.login-options a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}

@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Chat Assistant</title>
-  <link rel="stylesheet" href="home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Assistant - Home</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Icon -->
-    <div class="icon-wrapper">
-      <div class="icon">
-        <img src="logo.jpg" rel="stylesheet">
-      </div>
+    <!-- Top Navbar -->
+    <header class="navbar">
+        <div class="logo">ChatMate</div>
+        <div class="nav-buttons">
+            <button id="loginBtn">Login</button>
+            <button id="signupBtn" class="signup-btn">Sign Up</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="home-container">
+        <div class="icon">
+          <img src="logo.jpg">
+        </div>
+        <h1>ChatMate</h1>
+        <p>Your intelligent companion for conversations, questions, and creative assistance</p>
+
+        <div class="card">
+            <button class="glass-button">
+                ✨ <span>Smart Conversations</span>
+                <p>Engage in natural, intelligent discussions</p>
+            </button>
+            <button class="glass-button">
+                📚 <span>Knowledge Base</span>
+                <p>Get answers to your questions instantly</p>
+            </button>
+            <button class="glass-button">
+                🎨 <span>Creative Help</span>
+                <p>Assistance with writing and brainstorming</p>
+            </button>
+        </div>
+
+        <button id="startChatBtn" class="start-btn">Start Chatting</button>
     </div>
 
-    <!-- Title -->
-    <h1>AI Chat Assistant</h1>
-    <p class="subtitle">
-      Your intelligent companion for conversations, questions, and creative assistance
-    </p>
+    <script>
+        const loginBtn = document.getElementById("loginBtn");
+        const signupBtn = document.getElementById("signupBtn");
+        const startChatBtn = document.getElementById("startChatBtn");
 
-    <!-- Buttons -->
-    <div class="card">
-      <button class="glass-button">
-        ✨ <span>Smart Conversations</span>
-        <p>Engage in natural, intelligent discussions</p>
-      </button>
+        // Redirect to login page
+        loginBtn.addEventListener("click", () => {
+            window.location.href = "login.html";
+        });
 
-      <button class="glass-button">
-        📚 <span>Knowledge Base</span>
-        <p>Get answers to your questions instantly</p>
-      </button>
+        // Signup redirects to login page (can later change to signup page)
+        signupBtn.addEventListener("click", () => {
+            window.location.href = "login.html";
+        });
 
-      <button class="glass-button">
-        🎨 <span>Creative Help</span>
-        <p>Assistance with writing and brainstorming</p>
-      </button>
-    </div>
-
-    <!-- Start Button -->
-    <button class="start-btn">Start Chatting</button>
-  </div>
+        // Start chatting -> login page
+        startChatBtn.addEventListener("click", () => {
+            window.location.href = "login.html";
+        });
+    </script>
 </body>
 </html>

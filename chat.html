@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Interface</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="avatar">🙋🏻</div>
+                <div>
+                    <h2>User</h2>
+                    <span class="status">Online</span>
+                </div>
+            </div>
+            <a href="#" class="profile-settings">View Profile Settings</a>
+            <div class="recent-chats">
+                <h3>Recent Chats</h3>
+                <div class="chat-item">Welcome Chat<br><small>Just now</small></div>
+            </div>
+            <button class="new-chat">+ New Chat</button>
+        </aside>
+
+        <!-- Chat Section -->
+        <main class="chat-section">
+            <header class="chat-header">
+                <div class="ai-info">
+                    <div class="ai-avatar">🤖</div>
+                    <div>
+                        <h2>ChatMate</h2>
+                        <span class="status">Online</span>
+                    </div>
+                </div>
+            </header>
+            <div class="chat-box" id="chatBox">
+                <div class="message ai-message">
+                    <div class="ai-avatar">🤖</div>
+                    <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                </div>
+            </div>
+            <div class="suggestions">
+                <button class="suggestion-btn">Tell me a joke</button>
+                <button class="suggestion-btn">Explain quantum physics</button>
+                <button class="suggestion-btn">Help me write an email</button>
+                <button class="suggestion-btn">Creative writing ideas</button>
+            </div>
+            <div class="input-box">
+                <input type="text" id="userInput" placeholder="Type your message here...">
+                <button class="send-btn" id="sendBtn">➤</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <div class="modal-header">
+                <div class="avatar large">🙋🏻</div>
+                <h2 id="profileName">User</h2>
+            </div>
+            <div class="modal-body">
+                <label for="nameInput">Change Name</label>
+                <input type="text" id="nameInput" placeholder="Enter your name">
+
+                <label for="themeSelect">Theme</label>
+                <select id="themeSelect">
+                    <option value="dark">Dark Mode</option>
+                    <option value="light">Light Mode</option>
+                </select>
+
+                <label for="languageSelect">Language</label>
+                <select id="languageSelect">
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                    <option>German</option>
+                </select>
+
+                <button id="saveBtn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -110,3 +110,73 @@ img {
   height: 90px;
   border-radius: 50px;
 }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#loginBtn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#loginBtn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.signup-btn {
+    background: #ffffff;
+    color: #6a0dad;
+}
+
+.signup-btn:hover {
+    background: #e0d4f7;
+}
+
+/* Start Chat Button */
+.start-btn {
+    margin-top: 30px;
+    padding: 14px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #6a0dad;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: #e0d4f7;
+}
+
